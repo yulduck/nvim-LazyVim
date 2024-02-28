@@ -7,6 +7,7 @@ return {
         ["python"] = { "black" },
         ["bash"] = { "shfmt" },
         ["astro"] = { "prettier" },
+        ["json"] = { "jsonls" },
       },
       formatters = {
         injected = { options = { ignore_errors = true } },
@@ -22,6 +23,8 @@ return {
           prepend_args = { "-i", "2", "-ci" },
         },
       },
+      timeoutms = 10000,
+      timeout = 1000,
     },
   },
 }
