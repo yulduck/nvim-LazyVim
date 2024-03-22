@@ -60,17 +60,17 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 
 -- Formatting on save for templ files
 local templ_format = function()
-  local bufnr = vim.api.nvim_get_current_buf()
-  local filename = vim.api.nvim_buf_get_name(bufnr)
-  local cmd = "templ fmt " .. vim.fn.shellescape(filename)
-
-  vim.fn.jobstart(cmd, {
-    on_exit = function()
-      if vim.api.nvim_get_current_buf() == bufnr then
-        vim.cmd("e!")
-      end
-    end,
-  })
+  -- local bufnr = vim.api.nvim_get_current_buf()
+  -- local filename = vim.api.nvim_buf_get_name(bufnr)
+  -- local cmd = "templ fmt " .. vim.fn.shellescape(filename)
+  --
+  -- vim.fn.jobstart(cmd, {
+  --   on_exit = function()
+  --     if vim.api.nvim_get_current_buf() == bufnr then
+  --       vim.cmd("e!")
+  --     end
+  --   end,
+  -- })
 end
 
-vim.api.nvim_create_autocmd({ "BufWritePost" }, { pattern = { "*.templ" }, callback = templ_format })
+-- vim.api.nvim_create_autocmd({ "BufWritePost" }, { pattern = { "*.templ" }, callback = templ_format })
