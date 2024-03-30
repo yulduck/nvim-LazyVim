@@ -46,3 +46,8 @@ opt.clipboard = "unnamedplus"
 -- Register templ file type
 vim.filetype.add({ extension = { templ = "templ" } })
 vim.treesitter.language.register("templ", "templ")
+vim.filetype.add({
+  pattern = {
+    [".*%.blade%.php"] = "blade",
+  },
+})
