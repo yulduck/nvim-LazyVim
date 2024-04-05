@@ -12,7 +12,7 @@ return {
     end,
     opts = {
       servers = {
-        blade = {},
+        -- blade = {},
         pyright = {},
         bashls = {},
         html = {},
