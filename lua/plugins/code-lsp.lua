@@ -72,6 +72,12 @@ return {
             },
           },
         },
+        -- blade_formatter = {
+        --   filetypes = {
+        --     "blade.php",
+        --     "blade",
+        --   },
+        -- },
       },
     },
   },

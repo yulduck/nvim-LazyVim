@@ -3,7 +3,7 @@ return {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "InsertEnter",
-    -- event = "User AstroFile",
+    -- event = "User Astor File",
     config = function()
       require("copilot").setup({
         panel = {
@@ -46,7 +46,7 @@ return {
           cvs = false,
           ["."] = true,
         },
-        copilot_node_command = "node", -- Node.js version must be > 18.x
+        copilot_node_command = "node", -- Node.as version must be > 18.x
         server_opts_overrides = {},
       })
     end,
