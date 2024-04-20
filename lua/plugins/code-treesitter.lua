@@ -84,32 +84,32 @@
 --       }
 --       vim.list_extend(opts.ensure_installed, {
 -- =======
-<<<<<<< HEAD
-      })
-      opts.autotag = {
-        enable = true,
-        enable_rename = true,
-        enable_close = true,
-        enable_close_on_slash = true,
-        filetypes = {
-          "astro",
-          "html",
-          "javascript",
-          "typescript",
-          "svelte",
-          "vue",
-          "tsx",
-          "jsx",
-          "rescript",
-          "css",
-          "lua",
-          "xml",
-          "php",
-          "markdown",
-        },
-      }
-=======
-
+-- <<<<<<< HEAD
+--       })
+--       opts.autotag = {
+--         enable = true,
+--         enable_rename = true,
+--         enable_close = true,
+--         enable_close_on_slash = true,
+--         filetypes = {
+--           "astro",
+--           "html",
+--           "javascript",
+--           "typescript",
+--           "svelte",
+--           "vue",
+--           "tsx",
+--           "jsx",
+--           "rescript",
+--           "css",
+--           "lua",
+--           "xml",
+--           "php",
+--           "markdown",
+--         },
+--       }
+-- =======
+--
 return {
   {
     "nvim-treesitter/nvim-treesitter",
