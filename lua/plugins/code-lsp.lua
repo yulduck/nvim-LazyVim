@@ -12,6 +12,7 @@ return {
     end,
     opts = {
       servers = {
+        -- blade = {},
         pyright = {},
         bashls = {},
         html = {},
@@ -72,6 +73,12 @@ return {
             },
           },
         },
+        -- blade_formatter = {
+        --   filetypes = {
+        --     "blade.php",
+        --     "blade",
+        --   },
+        -- },
       },
     },
   },

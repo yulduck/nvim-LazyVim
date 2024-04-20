@@ -29,16 +29,29 @@ return {
         ["core.defaults"] = {}, -- Loads default behaviour
         ["core.concealer"] = {}, -- Adds pretty icons to your documents
         ["core.completion"] = { -- Adds completion to your documents
-          config = {
-            engine = "nvim-cmp",
-          },
+          config = function()
+            return {
+              engine = "nvim-cmp",
+            }
+          end,
+
+          -- config = {
+          --   engine = "nvim-cmp",
+          -- },
         },
         ["core.dirman"] = { -- Manages Neorg workspaces
-          config = {
-            workspaces = {
-              notes = "~/notes",
-            },
-          },
+          -- config = {
+          --   workspaces = {
+          --     notes = "~/notes",
+          --   },
+          -- },
+          config = function()
+            return {
+              workspaces = {
+                notes = "~/notes",
+              },
+            }
+          end,
         },
       },
     },
