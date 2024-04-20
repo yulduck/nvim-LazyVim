@@ -52,6 +52,7 @@ return {
             "scss",
             "typescriptreact",
             "templ",
+            "svelte",
           },
         },
         lua_ls = {

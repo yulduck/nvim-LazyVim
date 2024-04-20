@@ -7,7 +7,8 @@ return {
         ["python"] = { "black" },
         ["bash"] = { "shfmt" },
         ["astro"] = { "prettier" },
-        ["json"] = { "jsonls" },
+        ["json"] = { "prettier" },
+        -- ["json"] = { "jsonls" },
       },
       formatters = {
         injected = { options = { ignore_errors = true } },
