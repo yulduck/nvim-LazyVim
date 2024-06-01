@@ -157,7 +157,8 @@ return {
       k.nmap({
         "<leader>aa",
         function()
-          harpoon:list():append()
+          harpoon:list():add()
+          -- harpoon:list():append()
         end,
         opts({ desc = "Append File to Harpoon" }),
       })
