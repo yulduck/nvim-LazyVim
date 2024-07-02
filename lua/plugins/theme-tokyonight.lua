@@ -16,5 +16,6 @@ return {
         -- boolean = { bold = true },
       },
     },
+    config = function() end,
   },
 }

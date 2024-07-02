@@ -9,7 +9,8 @@ return {
         ["python"] = { "black" },
         ["bash"] = { "shfmt" },
         ["astro"] = { "prettier" },
-        ["json"] = { "prettier" },
+        ["json"] = { "jq" },
+        -- ["json"] = { "prettier" },
         -- ["json"] = { "jsonls" },
       },
       formatters = {

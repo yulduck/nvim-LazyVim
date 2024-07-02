@@ -22,9 +22,9 @@ return {
           },
         },
         suggestion = {
-          enabled = true,
+          enabled = false,
           auto_trigger = true,
-          debounce = 75,
+          debounce = 55,
           keymap = {
             accept = "<C-l>",
             -- accept = "<M-l>",
@@ -49,12 +49,6 @@ return {
         copilot_node_command = "node", -- Node.as version must be > 18.x
         server_opts_overrides = {},
       })
-    end,
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    config = function()
-      require("copilot_cmp").setup()
     end,
   },
 }

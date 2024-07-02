@@ -12,5 +12,6 @@ return {
     opts = {
       json_formatter = "jq",
     },
+    config = function() end,
   },
 }

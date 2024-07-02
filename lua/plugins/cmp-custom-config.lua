@@ -115,13 +115,16 @@ return {
         },
       }
 
+      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "supermaven", group_index = 2 } }))
+      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "copilot", group_index = 1 } }))
+
       opts.formatting = {
         fields = { "kind", "abbr", "menu" },
         format = function(entry, item)
           local kind = require("lspkind").cmp_format({
             mode = "symbol_text",
             maxwidth = 50,
-            symbol_map = { Copilot = "" },
+            symbol_map = { Copilot = "", Supermaven = "" },
           })(entry, item)
 
           local strings = vim.split(kind.kind, "%s", { trimempty = true })
@@ -131,6 +134,16 @@ return {
           return kind
         end,
       }
+      local lspkind = require("lspkind")
+      lspkind.init({
+        symbol_map = {
+          Supermaven = "",
+        },
+      })
+
+      vim.api.nvim_set_hl(0, "CmpItemKindSupermaven", { fg = "#6CC644" })
+      -- If you want insert `(` after select function or method item
+      cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
       return opts
     end,
   },
