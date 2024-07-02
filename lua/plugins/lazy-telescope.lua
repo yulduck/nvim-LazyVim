@@ -59,7 +59,9 @@ return {
       local k = require("config.user.customkey")
 
       -- Change SPC SPC to open files in current working directory instead
-      k.nmap({ "<leader><space>", Util.telescope("files", { cwd = false }), opts({ desc = "Find Files (cwd)" }) })
+      k.nmap({ "<leader><space>", LazyVim.pick("files", { cwd = nil }), opts({ desc = "Find Files (cwd)" }) })
+      -- k.nmap({ "<leader><space>", LazyVim.pick("files", { cwd = false }), opts({ desc = "Find Files (cwd)" }) })
+      -- k.nmap({ "<leader><space>", Util.telescope("files", { cwd = false }), opts({ desc = "Find Files (cwd)" }) })
 
       local open_with_trouble = function(...)
         return require("trouble.providers.telescope").open_with_trouble(...)
@@ -70,12 +72,14 @@ return {
       local find_files_no_ignore = function()
         local action_state = require("telescope.actions.state")
         local line = action_state.get_current_line()
-        Util.telescope("find_files", { no_ignore = true, default_text = line })()
+        LazyVim.pick("find_files", { no_ignore = true, default_text = line })()
+        -- Util.telescope("find_files", { no_ignore = true, default_text = line })()
       end
       local find_files_with_hidden = function()
         local action_state = require("telescope.actions.state")
         local line = action_state.get_current_line()
-        Util.telescope("find_files", { hidden = true, default_text = line })()
+        LazyVim.pick("find_files", { hidden = true, default_text = line })()
+        -- Util.telescope("find_files", { hidden = true, default_text = line })()
       end
 
       -- Load Telescope Extensions
